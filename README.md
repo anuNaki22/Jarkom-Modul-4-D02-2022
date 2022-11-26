@@ -103,10 +103,140 @@ Pada routing berikut adalah config yang berada pada router. Untuk langkah nya bi
 # Testing
 Hasil dari message antar node.
 
-![image](https://user-images.githubusercontent.com/99629909/203716968-2f518c15-413b-44c1-a23e-1119a9e78e6f.png)
-
+![image](https://user-images.githubusercontent.com/99629909/204089356-d6f9466c-bb09-4130-8f50-b3c8b79b9d78.png)
 
 # CIDR - GNS3
+Berikut ini merupakan tabel setiap langkah metode CIDR
+
+![image](https://user-images.githubusercontent.com/99629909/204090175-75581438-b99c-4e83-aa16-0ebdcd08ac92.png)
+<br>
+
+Berikut visualisasi tahapan setiap langkah 
+
+## Langkah 1
+
+![image](https://user-images.githubusercontent.com/99629909/204090240-6d1c2d71-2795-451b-b5d0-a0639820beae.png)
+<br>
+
+## Langkah 2
+
+![image](https://user-images.githubusercontent.com/99629909/204090256-50532793-c6fe-4c2b-b89a-f2afc7550d80.png)
+<br>
+
+## Langkah 3
+
+![image](https://user-images.githubusercontent.com/99629909/204090272-4aa1df91-71e0-4ed1-83bb-b00865d5a960.png)
+<br>
+
+## Langkah 4
+
+![image](https://user-images.githubusercontent.com/99629909/204090285-943a34a4-47d4-477d-8b72-3067ba05ba4f.png)
+<br>
+
+## Langkah 5
+
+![image](https://user-images.githubusercontent.com/99629909/204090298-f5fff5e1-f094-42f4-b691-8e4d7bb7bfc1.png)
+<br>
+
+## Langkah 6
+
+![image](https://user-images.githubusercontent.com/99629909/204090310-8bda3910-8804-4459-a22c-7a7d3659fd32.png)
+<br>
+
+## Langkah 7
+
+![image](https://user-images.githubusercontent.com/99629909/204090318-49ce27ad-829e-4d34-a40a-8fef04fa7f7f.png)
+<br>
+
+
+# Tree
+...
+
+<br>
+Maka, telah didapatkan tabel NID subnet dengan metode CIDR
+
+![image](https://user-images.githubusercontent.com/99629909/204090905-854f8a3f-6c6b-432a-97b0-1394dce229f6.png)
+<br>
+
+Dalam hal subnetting, CIDR sudah efisien, namun tidak efisien dalam hal range ip address yang digunakan dalam melakukan subnetting, yaitu perlu menggunakan netmask /17, padahal pada VLSM hanya butuh /20.
+<br>
+Hal itu bertujuan untuk memudahkan penambahan subnet baru pada jaringan komputer yang kita sudah buat
+
+Berikut adalah topologi pada GNS3:
+
+![image](https://user-images.githubusercontent.com/99629909/204090959-31e8ac6c-2593-4a82-a5b8-0094bc3df623.png)
+<br>
+
+Berikut adalah tabel rincian ip dari setiap node di GNS3 :
+
+![image](https://user-images.githubusercontent.com/99629909/204090678-bf5ef36f-9772-4458-a79b-eeff842860ad.png)
+<br>
+
+Untuk menambahkan routing pada suatu router, dapat menggunakan perintah berikut:
+```
+route add -net [NID] netmask [netmask] gw [next hop]
+```
+Contoh pada device resonance :
+```
+route add -net 10.16.0.0 netmask 255.255.192.0 gw 10.16.32.2
+```
+
+Untuk melihat routing yang telah dikonfigurasi, dapat menggunakan perintah berikut:
+```
+ip route | grep "via"
+```
+- The Resonance
+```
+default via 192.168.122.1 dev eth0  metric 295 
+10.16.0.0/18 via 10.16.32.2 dev eth4 
+10.16.64.0/19 via 10.16.80.2 dev eth3 
+10.16.96.0/19 via 10.16.98.2 dev eth2 
+10.16.100.0/30 via 10.16.100.2 dev eth1 
+```
+- The Instruments
+```
+default via 10.16.80.1 dev eth0 
+10.16.64.0/21 via 10.16.68.2 dev eth2 
+10.16.72.0/21 via 10.16.73.2 dev eth1 
+10.16.76.0/25 via 10.16.76.2 dev eth3
+```
+- The Magical
+```
+default via 10.16.98.1 dev eth0
+```
+- The Minister
+```
+default via 10.16.8.1 dev eth0 
+10.16.0.0/22 via 10.16.0.2 dev eth1 
+10.16.4.0/22 via 10.16.5.2 dev eth2 
+```
+- The Order
+```
+default via 10.16.32.1 dev eth0 
+10.16.0.0/20 via 10.16.8.2 dev eth2 
+10.16.16.0/26 via 10.16.16.2 dev eth1 
+```
+- The Profound
+```
+default via 10.16.73.1 dev eth0 
+```
+- The Dauntless
+```
+default via 10.16.5.1 dev eth0 
+```
+-The Firefist
+```
+default via 10.16.68.1 dev eth0 
+10.16.64.0/23 via 10.16.64.3 dev eth2 
+10.16.65.0/24 via 10.16.64.2 dev eth2 
+10.16.66.0/23 via 10.16.66.2 dev eth1 
+```
+- The Queen
+```
+default via 10.16.64.1 dev eth0
+```
+
+Seluruh konfigurasi telah selesai sehingga semua device/node sudah saling terhubung dan dapat mengakses internet
 
 # Kendala
 1. Awalnya kami masih bingung dengan pengaturan routing di CPT sehingga masih ada beberapa ping antar node yang failed, namun setelah demo akhirnya kami tahu letak kesalahan kami saat routing.
