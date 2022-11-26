@@ -4,7 +4,7 @@
 | :---:        |     :---:           | :---: |
 | 5025201082   | Farrel Emerson      |      |
 | 5025201087   | Daniel Hermawan     |      |
-| 5025201003   | Rahmat Faris Akbar  |   CPT VLSM   | 
+| 5025201003   | Rahmat Faris Akbar  |   VLSM (CPT) & CIDR (GNS3)   | 
 
 # Soal dan Jawaban
 ![image](https://user-images.githubusercontent.com/99629909/203712109-6de2410e-baaf-4ccb-9ecf-072a59427857.png)
