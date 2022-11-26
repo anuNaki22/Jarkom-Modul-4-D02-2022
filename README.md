@@ -14,7 +14,7 @@
 - Pembagian IP menggunakan Prefix IP yang telah ditentukan pada modul pengenalan.
 - Pembagian IP dan routing harus SE-EFISIEN MUNGKIN.
 
-Kami mengerjakan soal ini dengan menggunakan teknik VLSM pada CPT
+Kami mengerjakan soal ini dengan menggunakan teknik VLSM pada CPT dan teknik CIDR pada GNS3
 
 # VLSM - CPT
 ## Pembagian Subnet
