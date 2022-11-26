@@ -149,8 +149,8 @@ Berikut visualisasi tahapan setiap langkah
 <br>
 
 
-# Tree
-...
+# Tree CIDR GNS3
+![cidr gns3](https://user-images.githubusercontent.com/99629909/204092460-c41a60fb-20df-4414-910c-657decbd7bfe.jpg)
 
 <br>
 Maka, telah didapatkan tabel NID subnet dengan metode CIDR
@@ -224,7 +224,7 @@ default via 10.16.73.1 dev eth0
 ```
 default via 10.16.5.1 dev eth0 
 ```
--The Firefist
+- The Firefist
 ```
 default via 10.16.68.1 dev eth0 
 10.16.64.0/23 via 10.16.64.3 dev eth2 
