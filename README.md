@@ -59,44 +59,46 @@ Kedua langkah di atas dilakukan juga pada seluruh node yang lain.
 # Routing 
 Pada routing berikut adalah config yang berada pada router. Untuk langkah nya bisa masuk kedalam router, lalu menekan menu static dan menambahkan IP, dll sehingga semua node dapat terhubung.
 
-## The Refonance
+## The Resonance
 
-![image](https://user-images.githubusercontent.com/99629909/203715484-d56ddb15-a26b-410d-acc4-df2b837fb9c7.png)
+![image](https://user-images.githubusercontent.com/99629909/204088478-82d99225-5035-4960-8963-fd6f21460300.png)
 
 ## The Order
 
-![image](https://user-images.githubusercontent.com/99629909/203715720-947d6b74-de9b-4336-8387-405d5f37748e.png)
+![image](https://user-images.githubusercontent.com/99629909/204088509-75689f27-a083-4130-9024-8d35792c1fc7.png)
 
 ## The Minister
 
-![image](https://user-images.githubusercontent.com/99629909/203715836-9ad5a44c-2c07-4b67-b99c-2d62db49d299.png)
+![image](https://user-images.githubusercontent.com/99629909/204088526-ea8dfd22-3db2-40aa-8908-2bca801962a4.png)
 
-## The Daundless
+## The Dauntless
 
-![image](https://user-images.githubusercontent.com/99629909/203715925-c3df0cec-5a92-450f-b3ec-3ad90220b113.png)
+![image](https://user-images.githubusercontent.com/99629909/204088547-3d968cb7-da2e-44c8-8b0c-a67c111c445d.png)
 
-## The Megical
+## The Magical
 
-![image](https://user-images.githubusercontent.com/99629909/203716091-8a4564b2-e3d0-4d72-ab70-61f018246e8a.png)
+![image](https://user-images.githubusercontent.com/99629909/204088571-874e82a5-0367-4cb4-9d34-ad3430feed8e.png)
 
 ## The Instrument
 
-![image](https://user-images.githubusercontent.com/99629909/203716150-6198143c-c190-4a68-b94a-60d8d029bc7e.png)
+![image](https://user-images.githubusercontent.com/99629909/204088577-708a1592-0ee0-4921-98f7-cecd5a67daec.png)
 
-## The Poofound
+## The Profound
 
-![image](https://user-images.githubusercontent.com/99629909/203716236-c65c4fae-b5bc-4be1-9a16-f7bc87b3ecb8.png)
+![image](https://user-images.githubusercontent.com/99629909/204088626-e6d8a401-b73a-460e-8e20-c38f3afaa0c3.png)
 
-## The Etefist
+## The Firefist
 
-![image](https://user-images.githubusercontent.com/99629909/203716314-774d8dc3-8576-4d2c-9dd0-4ac81b0df620.png)
+![image](https://user-images.githubusercontent.com/99629909/204088645-551259c4-0bb3-4488-a22c-d98b0c058846.png)
 
 ## The Queen
 
-![image](https://user-images.githubusercontent.com/99629909/203716367-05aa04f0-3bb3-4531-978b-85ac0b0d715a.png)
+![image](https://user-images.githubusercontent.com/99629909/204088659-8a64afdb-8490-4198-9e1d-46665485c3d0.png)
 
 
-*keterangan: 0.0.0.0 berarti mengambil semua pesan dan diarahkan ke next hop.
+*keterangan: 
+1. 0.0.0.0 berarti mengambil semua pesan dan diarahkan ke next hop
+2. untuk konfigurasi setiap node dan pengaturan routing dari setiap router yang lebih jelas bisa dilihat pada file .pkt
 
 # Testing
 Hasil dari message antar node.
@@ -105,3 +107,6 @@ Hasil dari message antar node.
 
 
 # CIDR - GNS3
+
+# Kendala
+1. Awalnya kami masih bingung dengan pengaturan routing di CPT sehingga masih ada beberapa ping antar node yang failed, namun setelah demo akhirnya kami tahu letak kesalahan kami saat routing.
